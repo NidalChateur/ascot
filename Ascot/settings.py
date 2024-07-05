@@ -160,4 +160,4 @@ MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # heroku config
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
