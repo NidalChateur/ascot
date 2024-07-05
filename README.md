@@ -1,1 +1,1 @@
-# Refont frontend ascot.eu <a href="https://ascot.eu/">Ascot</a>
+# Refont frontend <a href="https://ascot.eu/">Ascot</a> website .
