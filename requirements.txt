@@ -1,0 +1,20 @@
+# backend framework
+django
+
+
+# frontend framework
+django-bootstrap5
+
+# image
+pillow
+
+# load environnement variables
+python-dotenv
+
+
+# deploy requirements
+gunicorn
+psycopg2-binary
+whitenoise[brotli]
+dj-database-url
+django-heroku

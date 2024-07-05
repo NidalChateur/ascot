@@ -1,0 +1,153 @@
+{% extends 'base.html' %} 
+{% load i18n %} 
+{% load static %} 
+{% block content %}
+
+<!-- row 1 (expertise)-->
+<div class="row d-flex justify-content-center">
+  <div class="col-12 col-lg-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+
+    <!-- expertise -->
+    <section>
+        <h1 class="text-secondary mb-4">{% translate "Expertise" %}</h1>
+
+        <div class="d-flex mb-3">
+          <img
+            src="{% static 'img/phare.jpg' %}"
+            alt="{% translate 'Breton lighthouse' %}"
+            class="rounded-pill me-3 border border-4"
+          />
+    
+          <p class="my-auto">
+            {% translate "Since 1988, we have been supporting service SMEs in their digital transformation." %}   
+          </p>
+        </div>
+    
+        <ul>
+          <li>
+            {% translate "Studies, technological consulting and monitoring, mastery and coherence of information system architecture, network engineering,business solutions integration, development, training, assistance, ..." %} 
+          </li>
+    
+          <br />
+    
+          <li>
+            {% translate "Expert in business solutions for the hospitality industry (Software, Point of Sale Systems, Internet Access, Online Services, IP Solutions: Video Surveillance, Telecommunications, ...)" %}
+          </li>
+    
+          <br />
+    
+          <li>
+            {% translate "Ad hoc interventions, on-site or under support contract. ASCOT offers extensive experience in addressing the challenges posed by the continuous integration of innovation into business processes." %}
+            <a
+              href="#"
+              target="_blank"
+              class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+              >{% translate "Learn more with our Newsletter" %}</a
+            >
+          </li>
+        </ul>
+        
+    </section>
+
+    <!-- philosophy -->
+    <section class="mt-5">
+        <h1 class="text-secondary">{% translate 'Philosophy' %}</h1>
+        <div class="row d-flex">
+          <p class="col-12 col-md-8 my-auto">
+            {% translate 'We share our passion for quality with business leaders who prioritize the human dimension and teamwork.' %}
+            <br>
+            {% translate "Our approach to technology is first and foremost that it serves its users." %}
+          </p>
+          <img
+            src="{% static 'img/puzzle.png' %}"
+            alt=""
+            class="col-6 col-md-4 img-fluid mx-auto"
+          />
+        </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- row 2 (actuality) -->
+<div class="row d-flex justify-content-center">
+
+  <div class="col-12 col-lg-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+      <h1 class="text-secondary mb-4">Actualité</h1>
+
+    <!-- actuality -->
+    <section>
+
+        <div class="d-flex mb-3">
+            <p class="my-auto col-7">Ascot vous accompagne aussi dans la productivité des services en ligne ("Le Cloud")...</p>
+            <a href="https://www.microsoft.com/fr-fr" target="_blank" class="col-5">
+                <img src="{% static 'img/Microsoft-Office-365.jpg' %}" alt="Microsoft Office 365" class="rounded-4 border border-4 office365 img-fluid">
+            </a>
+        </div>
+    
+        <ul>
+            <li>
+                Découvrez le premier service en ligne pour analyser simplement et rapidement la
+                carte et les ventes de son restaurant.
+                <a href="http://demo.cartoun.net/" target="_blank" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">
+                    Démonstration sur demo.cartoun.net
+                </a>
+            </li>
+    
+            <br>
+    
+            <li>
+                Une messagerie 25 Go, un intranet collaboratif et un espace pour vos web conférences accessible partout, securisé et hébergé par Microsoft : <br>
+                <a href="https://portal.office.com/partner/partnersignup.aspx?type=Trial&id=c153d40c-2e9c-442c-a337-bbaa0c739e7c&msppid=762082" target="_blank" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">
+                    Evaluation 30 jours gratuite Office 365
+                </a>
+            </li>
+        </ul>
+
+        <a href="https://www.microsoft.com/fr-fr" target="_blank" class="d-flex justify-content-center">
+            <img src="{% static 'img/cloud365.png' %}" alt="Microsoft Cloud 365" class="rounded-4 border border-4 col-6">
+        </a>
+
+    </section>
+
+
+  </div>
+
+</div>
+
+<!-- row 3 (caroussel) -->
+<div class="row d-flex justify-content-center">
+    <div class="col-12 col-lg-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+
+        <h1 class="text-secondary mb-4">{% translate "Partnership" %}</h1>
+
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <img src="{% static 'img/microsoft.jpg' %}" class="d-block w-100" alt="...">
+              </div>
+
+              <div class="carousel-item">
+                <img src="{% static 'img/bouygues.png' %}" class="d-block w-100" alt="...">
+              </div>
+
+              <div class="carousel-item">
+                <img src="{% static 'img/avantdecliquer.png' %}" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+
+    </div>
+</div>
+
+{% endblock content %}

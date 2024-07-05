@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-05 11:12+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\Ascot\settings.py:131
+msgid "French"
+msgstr ""
+
+#: .\Ascot\settings.py:132
+msgid "English"
+msgstr ""
+
+#: .\main\templates\home.html:12
+msgid "Savoir-Faire"
+msgstr ""
+
+#: .\main\templates\home.html:17
+msgid "Breton lighthouse"
+msgstr ""
+
+#: .\main\templates\home.html:22
+msgid ""
+"\n"
+"                Since 1988, we have been supporting service SMEs in their "
+"digital transformation.\n"
+"            "
+msgstr ""
+
+#: .\main\templates\home.html:30
+msgid ""
+"\n"
+"                Studies, technological consulting and monitoring, mastery "
+"and coherence of information system architecture, network engineering, "
+"business solutions integration, development, training, assistance, ...\n"
+"            "
+msgstr ""
+
+#: .\main\templates\home.html:62
+msgid "Philosophy"
+msgstr ""
+
+#: .\main\templates\home.html:131 .\templates\partials\navbar.html:63
+msgid "Partnership"
+msgstr ""
+
+#: .\templates\partials\footer.html:8
+msgid ""
+" Agency in Concept Strategy and Technological Organization. All rights "
+"reserved."
+msgstr ""
+
+#: .\templates\partials\modal_search.html:13
+#: .\templates\partials\modal_search.html:22
+#: .\templates\partials\navbar.html:121
+msgid "Search"
+msgstr ""
+
+#: .\templates\partials\modal_search.html:21
+msgid "Close"
+msgstr ""
+
+#: .\templates\partials\navbar.html:23 .\templates\partials\navbar.html:25
+msgid "Home"
+msgstr ""
+
+#: .\templates\partials\navbar.html:32
+msgid "About"
+msgstr ""
+
+#: .\templates\partials\navbar.html:35
+msgid "Our Company"
+msgstr ""
+
+#: .\templates\partials\navbar.html:36
+msgid "Our Staff"
+msgstr ""
+
+#: .\templates\partials\navbar.html:37
+msgid "Our Philosophy"
+msgstr ""
+
+#: .\templates\partials\navbar.html:44
+msgid "Our Expertise"
+msgstr ""
+
+#: .\templates\partials\navbar.html:47
+msgid "Architecture"
+msgstr ""
+
+#: .\templates\partials\navbar.html:48
+msgid "Integration"
+msgstr ""
+
+#: .\templates\partials\navbar.html:49
+msgid "Training"
+msgstr ""
+
+#: .\templates\partials\navbar.html:50
+msgid "Business Expertise"
+msgstr ""
+
+#: .\templates\partials\navbar.html:57
+msgid "Technologies"
+msgstr ""
+
+#: .\templates\partials\navbar.html:60
+msgid "Certification"
+msgstr ""
+
+#: .\templates\partials\navbar.html:61
+msgid "Systems and Networks"
+msgstr ""
+
+#: .\templates\partials\navbar.html:62
+msgid "Development"
+msgstr ""
+
+#: .\templates\partials\navbar.html:69
+msgid "References"
+msgstr ""
+
+#: .\templates\partials\navbar.html:80
+msgid "Languages"
+msgstr ""
+
+#: .\templates\partials\navbar.html:133 .\templates\partials\navbar.html:135
+msgid "Account"
+msgstr ""
+
+#: .\templates\partials\navbar.html:140
+msgid "Log out"
+msgstr ""
+
+#: .\templates\partials\navbar.html:147 .\templates\partials\navbar.html:149
+msgid "Log in"
+msgstr ""

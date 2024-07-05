@@ -1,0 +1,159 @@
+{% load i18n %}
+{% load static %}
+
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          
+          <!-- brand -->
+          <a class="navbar-brand" href="https://ascot.eu/"><img src="{% static 'img/logo.gif' %}" alt="logo" class="logo rounded-start-pill border border-light border-4"></a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse container" id="navbarSupportedContent">
+            
+            <!--  Left Side  -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+                <!-- home -->
+              <li class="nav-item">
+                {% if request.path == "/fr/" or  request.path == "/en/" %}
+                  <a class="nav-link active fw-bold" aria-current="page" href="https://ascot.eu/">{% translate 'Home' %} <i class="bi bi-house-fill"></i></a>
+                {% else %}
+                  <a class="nav-link" href="https://ascot.eu/">{% translate 'Home' %} <i class="bi bi-house"></i></a>
+                {% endif %}
+              </li>
+
+              <!-- about -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {% translate "About" %}
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">{% translate 'Our Company' %}</a></li>
+                  <li><a class="dropdown-item" href="#">{% translate 'Our Staff' %}</a></li>
+                  <li><a class="dropdown-item" href="#">{% translate 'Our Philosophy' %}</a></li>
+                </ul>
+              </li>
+
+              <!-- expertise -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {% translate "Our Expertise" %}
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">{% translate 'Architecture' %}</a></li>
+                  <li><a class="dropdown-item" href="#">{% translate 'Integration' %}</a></li>
+                  <li><a class="dropdown-item" href="#">{% translate 'Training' %}</a></li>
+                  <li><a class="dropdown-item" href="#">{% translate 'Business Expertise' %}</a></li>
+                </ul>
+              </li>
+
+              <!-- technologies -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {% translate "Technologies" %}
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">{% translate 'Certification' %}</a></li>
+                  <li><a class="dropdown-item" href="#">{% translate 'Systems and Networks' %}</a></li>
+                  <li><a class="dropdown-item" href="#">{% translate 'Development' %}</a></li>
+                  <li><a class="dropdown-item" href="#">{% translate 'Partnership' %}</a></li>
+                </ul>
+              </li>
+
+              <!-- references -->
+              <li class="nav-item">
+                  <a class="nav-link" href="">{% translate 'References' %}</a>
+              </li>
+
+              <!-- contact -->
+              <li class="nav-item">
+                <a class="nav-link" href="">Contact</a>
+              </li>
+
+              <!-- languages -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {% translate 'Languages' %} <i class="bi bi-translate"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- get the languages list  -->
+                    {% get_available_languages as LANGUAGES %}
+                    <!--  get languages informations -->
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    <!-- get the current language -->
+                    {% get_current_language as LANGUAGE_CODE %}
+
+                    {% for language in languages %}
+                        <li>
+                            <form action="{% url 'set_language' %}" method="post">
+                              {% csrf_token %}
+
+                              <!-- post the current path as parameter -->
+                              <input name="next" type="hidden" value="{{ request.path }}">
+                              <!-- post the chosen language code as parameter -->
+                              <input name="language" type="hidden" value="{{ language.code }}">
+
+                              <button type="submit" class="dropdown-item">
+                                  {% if language.code == request.LANGUAGE_CODE %}
+                                      <strong>{{ language.name_local|title }}</strong>
+                                  {% else %}
+                                      {{ language.name_local|title }}
+                                  {% endif %}
+                              </button>
+                            </form>
+                        </li>
+                    {% endfor %}
+                </ul>
+              </li>
+
+
+            </ul>
+
+            <!--  Middle -->
+            <ul class="navbar-nav me-auto">
+
+              <!-- Search Button trigger modal -->
+              <li class="nav-item">
+                <a href="" class="nav-link" data-bs-toggle="modal" data-bs-target="#searchModal" id="search_button_trigger_modal">{% translate "Search" %} <i class="bi bi-search d-none d-lg-inline"></i></a>
+              </li>
+
+            </ul>
+
+            <!-- Right Side-->
+             <ul class="navbar-nav">
+
+              {% if request.user.is_authenticated %}
+
+                <li class="nav-item">
+                  {% if request.path == "/fr/account/" or request.path == "/en/account/" %} 
+                    <a href="" class="nav-link active fw-bold" aria-current="page">{% translate "Account" %}</a>
+                  {% else %}
+                  <a href="" class="nav-link">{% translate "Account" %}</a>
+                  {% endif %}
+                </li>
+
+                <li class="nav-item"> 
+                  <a href="" class="nav-link">{% translate "Log out" %}</a>
+                </li>
+                
+              {% else %}
+
+                <li class="nav-item">
+                  {% if request.path == "/fr/login/" or request.path == "/en/login/" %}
+                    <a href="" class="nav-link active fw-bold" aria-current="page">{% translate "Log in" %}</a>
+                  {% else %}
+                    <a href="" class="nav-link">{% translate "Log in" %}</a>
+                  {% endif %}
+                </li>
+              
+              {% endif %}
+             </ul>
+
+          </div>
+        </div>
+      </nav>
+</header>
