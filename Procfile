@@ -1,1 +1,1 @@
-web: gunicorn multilang_site.wsgi --log-file -
+web: gunicorn Ascot.wsgi --log-file -
